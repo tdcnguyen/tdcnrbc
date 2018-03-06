@@ -1,0 +1,25 @@
+<p>
+<h1> <% if (user.displayName) { %>
+<%= user.displayName %>'s
+<% } %>
+Profile </h1>
+<img src=<%= user._json.picture %> height=120 width=120><br/>
+Family Name: <%= user.name.familyName %><br/>
+Given Name: <%= user.name.givenName %><br/>
+<br/>
+
+<div class="form-header">
+<h2>My Motto</h2>
+<% if (motto) { %><%= motto %><% } %>
+
+<h3>Update My Motto</h3>
+</div>
+<form action="/profile" method="post">
+<input type="text" name="motto" maxlength="80" size="80" value="<% if (motto) { %><%= motto %><% } %>" autofocus><br/>
+<button class="btn" type="submit">Send</button>(80 characters max)
+</div>
+</form>
+<br/>
+
+<a href="/logout">Logout</a><br/>
+</p>

@@ -1,0 +1,34 @@
+{
+  "name": "tdcnrbc",
+  "version": "0.0.0",
+  "description": "TDCN RBC",
+  "keywords": [
+    "express",
+    "passport"
+  ],
+  "author": "Thai Duy Cuong Nguyen",
+  "license": "Unlicense",
+  "homepage": "https://github.com/tdcnguyen/tdcnrbc",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tdcnguyen/tdcnrbc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tdcnguyen/tdcnrbc/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "caja-html-sanitizer": "^0.1.1",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.3.5",
+    "ejs": "^2.3.3",
+    "express": "^4.13.1",
+    "express-layout": "^0.1.0",
+    "express-session": "^1.11.3",
+    "express-validator": "^5.0.3",
+    "helmet": "^3.12.0",
+    "morgan": "^1.6.1",
+    "passport": "^0.2.2",
+    "passport-google-oauth20": "^1.0.0"
+  }
+}
