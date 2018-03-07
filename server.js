@@ -120,7 +120,7 @@ app.get('/profile',
             motto = "";
         }
         motto = sanitize(motto);
-        res.render('profile', { user: req.user, motto: motto });
+        res.render('profile', { user: req.user, motto: motto, mottoLengthMax: mottoLengthMax });
   });
 
 // Profile update
@@ -130,7 +130,7 @@ app.post('/profile',
         var errors = validationResult(req)
         var mottofile = path.join(__dirname, 'data', req.user._json.id + '.txt');
         var motto = sanitize(req.body.motto.trim().substring(0, mottoLengthMax));
-        res.render('profile', { user: req.user, motto: motto, errors: errors.mapped() });
+        res.render('profile', { user: req.user, motto: motto, errors: errors.mapped(), mottoLengthMax: mottoLengthMax });
         fs.writeFileSync(mottofile, motto);
         });
 
